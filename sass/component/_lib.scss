@@ -1,0 +1,318 @@
+.logo{
+    width: 187px;
+    height: 64px;
+    &__link{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.form{
+    &__input{
+        position: relative;
+        input{
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+            border: 1px solid #C2CFE0;
+            border-radius: 12px;
+        }
+        input[type= "password"]{
+         padding-right: 16px;
+        }
+        input:focus{
+            outline: none;
+         
+        }
+        
+        input{
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            color: #C2CFE0;
+            padding-left: 16px;
+            
+        }
+        ::placeholder{
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            color: #C2CFE0;
+        }
+    }
+    &__btn-wrapper{
+        display: flex;
+    
+        justify-content: center;
+      
+        width: 100%;
+    }
+
+    &__submit{
+        display: inline-flex;
+        input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #109CF1;
+            padding: 11px 32px;
+            box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
+            border-radius: 4px;
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: all 300ms ease;
+            &:hover{
+                background: #58C0FF;
+            }
+        }
+    }
+    &__item{
+        position: relative;
+    }
+    &__icon{
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        z-index: 10;
+        
+        svg path{
+           transition: all 300ms ease;
+        }
+        &:hover{
+            svg path{
+                stroke:#90A0B7;
+            }
+        }
+        cursor: pointer;
+       
+    }
+
+    &__link{
+        display: inline-block;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #109CF1;
+        text-align: center;
+        width: 100%;
+        &--black{
+            color: #334D6E;
+            display: inline;
+
+        }
+    }
+
+    &__radio{
+        &-input{
+            display: none;
+            &:checked + .form__radio-label{
+                &::before{
+                    border-color: #109CF1;
+                }
+                &::after{
+                    display: block;
+                }
+                
+            }
+        }
+        &-label{
+            position: relative;
+            display: block;
+            padding-left: 32px;
+            // border: 1px solid;
+            cursor: pointer;
+            &::before{
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                border: 2px solid#DAE2EC;
+                border-radius:50% ;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &::after{
+                content: '';
+                display: none;
+                width: 8px;
+                height: 8px;
+                border-radius:50% ;
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                transform: translateY(-50%);
+                background: #109CF1;
+            }
+        }
+    }
+    
+}
+
+.eye-close{
+    display: none!important;
+}
+
+.compte{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background: #FFFFFF;
+    transition: all 300ms ease;
+    padding: 0 24px;
+    
+    &:hover{
+        background: #F6F8FB;
+    }
+
+    &__text{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #323C47;
+    }
+    &__number{
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        background: #F4A519;
+        border-radius: 21px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        &--blue{
+            background: #58C0FF;
+        }
+        &--green{
+            background: #75DB64;
+        }
+    }
+}
+
+.notification{
+    display: inline-block;
+    padding: 16px 12px;
+    border-bottom: 1px solid #C2CFE0;
+
+    width: 100%;
+    &:hover{
+        .notification__text{
+            color: #109CF1;
+        }
+    }
+    &--new{
+        background: #E4F5FF;
+    }
+   &__text{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #323C47;
+    transition: all 300ms ease;
+    &:hover{
+        color: #109CF1;
+    }
+    
+   }
+   &__date{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #90A0B7;
+    margin-top: 8px;
+   }
+
+}
+.link-user-pop{
+    padding: 8px 24px;
+    display: block;
+    font-family: 'Manrope';
+    font-style: normal;
+    &--btn{
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #F44336;
+        
+    }
+    &--link{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #323C47;
+        
+    }
+   
+}
+
+.h1{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.02em;
+    color: #323C47;
+    &--icon{
+        display: flex;
+        align-items: center;
+        gap: 0 16px;
+        svg{
+            display: block;
+            width: 48px;
+            height: 48px;
+          
+        }
+        .h1__icon{
+            &--left{
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}

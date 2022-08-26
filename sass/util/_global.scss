@@ -1,0 +1,43 @@
+.page-wrapper{
+    overflow: hidden;
+    display: flex;
+}
+
+
+#dashbor{
+
+    font-family: 'Manrope';
+    font-style: normal;  
+}
+
+.h2{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #323C47;
+    
+}
+
+.show-label{
+display: block!important;
+}
+@media screen and (max-width:767px) {
+    .h2{
+        font-size: 20px;
+        line-height: 22px;
+        
+    }
+}
+
+.page-body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    section{
+        flex-grow: 1;
+      
+    }
+}
